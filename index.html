@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#10171f">
+    <meta name="description" content="Un reto visual para reconocer los componentes de una placa base.">
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+    <title>Connector Challenge — Aprende hardware jugando</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#inicio" aria-label="Connector Challenge, inicio">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+          <span class="brand-name">connector<span>challenge</span></span>
+        </a>
+        <div class="topbar-note"><span class="status-dot"></span> APRENDE A TU RITMO</div>
+        <a class="text-button" href="#leaderboard">Récords <span aria-hidden="true">↗</span></a>
+      </header>
+      <main id="inicio">
+        <section class="screen screen-setup" id="setup-screen" aria-labelledby="setup-title">
+          <div class="intro">
+            <div class="eyebrow"><span class="eyebrow-line"></span> LABORATORIO DE HARDWARE <span class="eyebrow-index">01 / 03</span></div>
+            <h1 id="setup-title">La placa base<br>no tiene secretos.</h1>
+            <p class="intro-copy">Mira. Reconoce. Conecta las piezas. Un reto rápido para que cada componente te resulte familiar.</p>
+            <div class="intro-stats" aria-label="Detalles del reto">
+              <div><strong>01</strong><span>elige tu reto</span></div><i aria-hidden="true"></i>
+              <div><strong>10</strong><span>hasta 10 preguntas por partida</span></div><i aria-hidden="true"></i>
+              <div><strong>0</strong><span>experiencia necesaria</span></div>
+            </div>
+            <div class="board-art" aria-hidden="true">
+              <div class="board-outline">
+                <span class="board-chip chip-main">CPU</span><span class="board-chip chip-memory">RAM</span>
+                <span class="board-chip chip-pcie">PCIe</span><span class="board-chip chip-socket">LGA</span>
+                <span class="board-trace trace-one"></span><span class="board-trace trace-two"></span><span class="board-trace trace-three"></span>
+                <span class="board-pin pin-a"></span><span class="board-pin pin-b"></span><span class="board-pin pin-c"></span><span class="board-label">MB—01</span>
+              </div><span class="art-caption">IDENTIFICA CADA CONECTOR</span>
+            </div>
+          </div>
+          <div class="setup-card">
+            <div class="card-heading"><div><span class="step-label">PREPARA TU PARTIDA</span><h2>¿Listo para conectar?</h2></div><span class="step-number">01</span></div>
+            <form id="setup-form" novalidate>
+              <div class="form-row">
+                <label class="field"><span>Nombre del jugador</span><input id="player-name" name="playerName" type="text" autocomplete="given-name" maxlength="24" placeholder="¿Cómo te llamas?" required></label>
+                <div class="field" id="duel-fields" hidden><label for="opponent-name">Nombre del segundo jugador</label><input id="opponent-name" name="opponentName" type="text" maxlength="24" placeholder="Nombre del rival"></div>
+              </div>
+              <p class="form-error" id="setup-error" role="alert" hidden></p>
+              <p class="storage-notice" id="storage-notice"><span aria-hidden="true">●</span> Tu progreso se guarda solo en este dispositivo.</p>
+              <fieldset class="choice-group topics">
+                <legend><span>01</span> Elige los temas <span class="field-hint">PUEDES MARCAR VARIOS</span></legend>
+                <div class="topic-grid">
+                  <label class="check-card"><input type="checkbox" name="topics" value="cpu"><span class="fake-check"></span><span class="topic-icon" aria-hidden="true">CPU</span><span>Procesador</span></label>
+                  <label class="check-card"><input type="checkbox" name="topics" value="sata"><span class="fake-check"></span><span class="topic-icon" aria-hidden="true">SATA</span><span>Almacenamiento</span></label>
+                  <label class="check-card"><input type="checkbox" name="topics" value="pcie"><span class="fake-check"></span><span class="topic-icon" aria-hidden="true">PCIe</span><span>Ranuras PCIe</span></label>
+                  <label class="check-card"><input type="checkbox" name="topics" value="ram"><span class="fake-check"></span><span class="topic-icon" aria-hidden="true">RAM</span><span>Memoria RAM</span></label>
+                  <label class="check-card"><input type="checkbox" name="topics" value="power"><span class="fake-check"></span><span class="topic-icon" aria-hidden="true">PWR</span><span>Alimentación</span></label>
+                </div>
+              </fieldset>
+              <fieldset class="choice-group">
+                <legend><span>02</span> Modo de juego</legend>
+                <div class="mode-grid">
+                  <label class="mode-card"><input id="mode" type="radio" name="mode" value="solo" checked><span class="mode-radio"></span><span class="mode-title">Práctica individual</span><span class="mode-description">Aprende a tu ritmo.</span></label>
+                  <label class="mode-card"><input type="radio" name="mode" value="timed"><span class="mode-radio"></span><span class="mode-title">Contrarreloj</span><span class="mode-description">Responde antes de que se agote el tiempo.</span></label>
+                  <label class="mode-card"><input type="radio" name="mode" value="duel"><span class="mode-radio"></span><span class="mode-title">Duelo</span><span class="mode-description">Dos jugadores, una pregunta a la vez.</span></label>
+                </div>
+                <div class="timer-choice" id="timer-fields" hidden>
+                  <label for="timed-seconds">Tiempo por pregunta</label>
+                  <select id="timed-seconds" name="timedSeconds"><option value="10">10 segundos</option><option value="15" selected>15 segundos</option></select>
+                </div>
+              </fieldset>
+              <fieldset class="choice-group difficulty-group">
+                <legend><span>03</span> Nivel de dificultad <span class="field-hint">EMPIEZA DONDE QUIERAS</span></legend>
+                <div class="difficulty-grid">
+                  <label class="level-option"><input id="difficulty" type="radio" name="difficulty" value="1" checked><span class="level-number">01</span><span>Fácil</span></label>
+                  <label class="level-option"><input type="radio" name="difficulty" value="2"><span class="level-number">02</span><span>Principiante</span></label>
+                  <label class="level-option"><input type="radio" name="difficulty" value="3"><span class="level-number">03</span><span>Intermedio</span></label>
+                  <label class="level-option"><input type="radio" name="difficulty" value="4"><span class="level-number">04</span><span>Avanzado</span></label>
+                  <label class="level-option"><input type="radio" name="difficulty" value="5"><span class="level-number">05</span><span>Experto</span></label>
+                  <label class="level-option"><input type="radio" name="difficulty" value="6"><span class="level-number">06</span><span>Maestro</span></label>
+                </div>
+              </fieldset>
+              <div class="setup-footer">
+                <span>Elige al menos un tema para empezar.</span>
+                <button class="button button-primary" type="submit" id="start-game">Empezar reto <span aria-hidden="true">→</span></button>
+              </div>
+              <div class="boss-gate">
+                <div><span class="step-label">DESAFÍO EXTRA</span><strong>Jefe final</strong><p id="boss-status">Completa los seis niveles en práctica, con todos los temas y al menos 70 % de aciertos.</p></div>
+                <button class="button button-secondary" type="button" id="boss-start" disabled>Ver requisito</button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <section class="screen game-screen" id="game-screen" aria-labelledby="question-title" hidden>
+          <div class="game-topline">
+            <a class="back-button" href="#setup-screen"><span aria-hidden="true">←</span> Salir del reto</a>
+            <div class="game-meta"><span data-game-topic>PLACA BASE</span><span class="meta-divider"></span><span>NIVEL <b data-game-difficulty>01</b></span></div>
+            <div class="timer" aria-live="polite"><span class="timer-indicator"></span><span id="timer-value">—</span><small>SEG</small><span class="timer-track" aria-hidden="true"><span id="timer-bar"></span></span></div>
+          </div>
+          <div class="progress-line" id="progress-bar" role="progressbar" aria-label="Progreso de la partida" aria-valuemin="0" aria-valuemax="10" aria-valuenow="1"><span></span></div>
+          <div class="game-heading">
+            <div><span class="step-label">PREGUNTA <b id="question-number">01</b> <span class="muted">/ 10</span></span><h1 id="question-title">¿Qué componente estamos buscando?</h1></div>
+            <div class="score-box"><span>PUNTOS</span><strong id="score-display">000</strong></div>
+          </div>
+          <div class="active-player" id="active-player-display" aria-live="polite" hidden>Turno de <strong>Jugador 1</strong></div>
+          <div class="game-layout">
+            <div class="question-column">
+              <figure class="question-visual">
+                <div class="visual-placeholder" aria-hidden="true"><span class="visual-cross cross-a"></span><span class="visual-cross cross-b"></span><span class="placeholder-chip"><i></i><i></i><i></i><i></i></span><span class="visual-label">IMAGEN DEL COMPONENTE</span><span class="visual-coordinate">REF. 00—00</span></div>
+                <img id="question-image" alt="Imagen del componente de hardware que debes identificar" hidden>
+                <figcaption id="image-credit" hidden></figcaption>
+              </figure>
+              <div class="feedback-panel" id="feedback" role="status" aria-live="polite" hidden>
+                <span class="feedback-mark" aria-hidden="true">✓</span><div><strong id="feedback-title">¡Correcto!</strong><p id="feedback-text">Has identificado el componente.</p></div>
+              </div>
+            </div>
+            <aside class="game-aside">
+              <div class="answer-panel">
+                <div class="answer-heading"><span>ELIGE UNA RESPUESTA</span><span class="answer-hint">A — D</span></div>
+                <div class="answer-list" id="answer-list" aria-label="Opciones de respuesta"></div>
+                <div class="help-actions" aria-label="Ayudas disponibles">
+                  <span>UNA AYUDA, SI LA NECESITAS</span>
+                  <div>
+                    <button type="button" id="help-5050"><span aria-hidden="true">½</span> 50/50</button>
+                    <button type="button" id="help-time"><span aria-hidden="true">+</span> Tiempo</button>
+                    <button type="button" id="help-double"><span aria-hidden="true">×2</span> Doble</button>
+                  </div>
+                </div>
+              </div>
+              <div class="lives-score-row">
+                <div class="lives" id="lives-container"><span>VIDAS</span><span id="lives-display" aria-label="Tres vidas">● ● ●</span></div>
+                <div class="mini-score">RACHA <strong data-streak>0</strong></div>
+              </div>
+              <button class="button button-primary button-next" type="button" id="continue-button" hidden>Siguiente pregunta <span aria-hidden="true">→</span></button>
+            </aside>
+          </div>
+        </section>
+
+        <section class="screen results-screen" id="results-screen" aria-labelledby="result-title" hidden>
+          <div class="results-hero">
+            <div class="eyebrow"><span class="eyebrow-line"></span> RETO COMPLETADO <span class="eyebrow-index">03 / 03</span></div>
+            <div class="result-mark" aria-hidden="true"><span>✓</span></div>
+            <h1 id="result-title">Buen trabajo,<br><span>explorador</span>.</h1>
+            <p>Un componente más que ya reconoces a primera vista.</p>
+          </div>
+          <div class="results-content">
+            <div class="result-summary" id="results-summary">
+              <span class="step-label">RESUMEN DE PARTIDA</span>
+              <div class="result-stats" id="results-details">
+                <div><strong data-result-score>000</strong><span>puntos</span></div>
+                <div><strong data-result-correct>0 <small>/ 10</small></strong><span>respuestas correctas</span></div>
+                <div><strong data-result-time>—</strong><span>tiempo total</span></div>
+                <div><strong data-result-level>01</strong><span>nivel</span></div>
+              </div>
+              <div class="result-actions">
+                <button class="button button-primary" type="button" id="play-again">Jugar otra vez <span aria-hidden="true">→</span></button>
+                <button class="button button-secondary" type="button" id="back-to-setup">Cambiar configuración</button>
+              </div>
+            </div>
+             <section class="progress-panel" aria-labelledby="progress-title"><div class="records-heading"><div><span class="step-label">TU RECORRIDO</span><h2 id="progress-title">Progreso por nivel</h2></div></div><div id="progress-list"><p>Completa partidas de práctica con todos los temas para guardar tu avance.</p></div></section>
+          </div>
+        </section>
+        <section class="records-panel" id="leaderboard" aria-labelledby="records-title">
+          <div class="records-heading"><div><span class="step-label">TU HISTORIAL</span><h2 id="records-title">Mejores partidas</h2></div><span class="records-cap">HASTA 10</span></div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th scope="col">#</th><th scope="col">JUGADOR</th><th scope="col">MODO</th><th scope="col">NIVEL</th><th scope="col">PUNTOS</th><th scope="col">FECHA</th></tr></thead>
+              <tbody id="leaderboard-body"><tr data-empty-records><td colspan="6"><span class="empty-record-mark" aria-hidden="true">—</span>Aún no hay partidas. Tu primera marca empieza aquí.</td></tr></tbody>
+            </table>
+          </div>
+          <p class="local-note"><span aria-hidden="true">⌂</span> El historial solo se guarda en este dispositivo. No se sincroniza entre dispositivos.</p>
+        </section>
+      </main>
+      <footer class="footer"><span>CONNECTOR CHALLENGE <span class="footer-divider">/</span> APRENDE HACIENDO</span><span>HARDWARE, PIEZA A PIEZA.</span></footer>
+    </div>
+    <script>
+      const gameScript = document.createElement("script");
+      gameScript.src = "./game.js";
+      document.body.appendChild(gameScript);
+    </script>
+  </body>
+</html>

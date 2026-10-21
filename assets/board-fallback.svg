@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 480" role="img" aria-labelledby="title desc">
+  <title id="title">Ilustración de respaldo de una placa base</title><desc id="desc">Vista general de una placa base original con sus componentes principales señalados.</desc>
+  <defs><pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#253642" stroke-width="1"/></pattern></defs>
+  <rect width="700" height="480" fill="#17232b"/><rect width="700" height="480" fill="url(#grid)"/>
+  <path d="M52 54h596v372H52z" fill="#192830" stroke="#59717a" stroke-width="2" rx="12"/>
+  <rect x="115" y="122" width="140" height="130" rx="5" fill="#21343a" stroke="#c4f36b" stroke-width="2"/>
+  <rect x="141" y="148" width="88" height="78" fill="#16242b" stroke="#91b650"/>
+  <g fill="#253b3c" stroke="#a6d65a"><rect x="326" y="98" width="24" height="201"/><rect x="369" y="98" width="24" height="201"/><rect x="412" y="98" width="24" height="201"/></g>
+  <rect x="113" y="315" width="408" height="22" rx="3" fill="#111b22" stroke="#c4f36b" stroke-width="2"/>
+  <g fill="#8dad54"><rect x="135" y="344" width="16" height="44"/><rect x="163" y="344" width="16" height="44"/><rect x="191" y="344" width="16" height="44"/><rect x="219" y="344" width="16" height="44"/></g>
+  <rect x="535" y="132" width="62" height="30" rx="3" fill="#233a38" stroke="#c4f36b" stroke-width="2"/>
+  <path d="M255 188h45v-52h26M255 231h39v77h-46M438 151h55v-30h42M350 300v43h-88M521 325h57v-76h-48" fill="none" stroke="#849d7c" stroke-width="2"/>
+  <text x="120" y="112" fill="#c4f36b" font-family="monospace" font-size="10">A1</text><text x="332" y="324" fill="#c4f36b" font-family="monospace" font-size="10">B2</text><text x="213" y="304" fill="#c4f36b" font-family="monospace" font-size="10">C3</text><text x="536" y="180" fill="#c4f36b" font-family="monospace" font-size="10">D4</text>
+  <text x="72" y="82" fill="#91a5ad" font-family="monospace" font-size="11" letter-spacing="2">PLACA BASE / VISTA GENERAL</text>
+</svg>

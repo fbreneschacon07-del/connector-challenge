@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 480" role="img" aria-labelledby="title desc">
+  <title id="title">Ranuras DIMM de memoria</title><desc id="desc">Cuatro ranuras DIMM largas y sus seguros en una placa base, con la zona resaltada en verde lima.</desc>
+  <defs><pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#253642" stroke-width="1"/></pattern><linearGradient id="glow" x2="0" y2="1"><stop stop-color="#c4f36b" stop-opacity=".17"/><stop offset="1" stop-color="#c4f36b" stop-opacity="0"/></linearGradient></defs>
+  <rect width="700" height="480" fill="#17232b"/><rect width="700" height="480" fill="url(#grid)"/>
+  <path d="M48 51h604v376H48z" fill="#192830" stroke="#49606a" stroke-width="2" rx="12"/>
+  <path d="M90 104h150v130H90z" fill="#1d3037" stroke="#405862"/>
+  <rect x="315" y="72" width="284" height="332" rx="10" fill="url(#glow)" stroke="#c4f36b" stroke-width="2"/>
+  <g stroke="#94bf53" stroke-width="2">
+    <rect x="354" y="102" width="26" height="252" rx="3" fill="#1a292f"/><rect x="408" y="102" width="26" height="252" rx="3" fill="#1a292f"/>
+    <rect x="462" y="102" width="26" height="252" rx="3" fill="#1a292f"/><rect x="516" y="102" width="26" height="252" rx="3" fill="#1a292f"/>
+  </g>
+  <g stroke="#c4f36b" stroke-width="1" opacity=".7"><path d="M360 110v230m6-230v230m6-230v230M414 110v230m6-230v230m6-230v230M468 110v230m6-230v230m6-230v230M522 110v230m6-230v230m6-230v230"/></g>
+  <g fill="#c4f36b"><path d="M347 343h12v18h-12zm28 0h12v18h-12zm27 0h12v18h-12zm28 0h12v18h-12zm27 0h12v18h-12zm28 0h12v18h-12zm27 0h12v18h-12zm28 0h12v18h-12z"/></g>
+  <path d="M354 89v-24h-88M434 356v26h-86M542 153h50v-30h37" fill="none" stroke="#859d7a" stroke-width="2"/>
+  <circle cx="266" cy="65" r="4" fill="#c4f36b"/><circle cx="348" cy="382" r="4" fill="#c4f36b"/><circle cx="629" cy="123" r="4" fill="#c4f36b"/>
+  <text x="69" y="79" fill="#8197a0" font-family="monospace" font-size="11" letter-spacing="2">PLACA BASE / COMPONENTES</text>
+  <text x="395" y="383" fill="#c4f36b" font-family="monospace" font-size="12" letter-spacing="2">ÁREA DESTACADA</text><text x="116" y="283" fill="#728893" font-family="monospace" font-size="10">REF. 04—D</text>
+</svg>

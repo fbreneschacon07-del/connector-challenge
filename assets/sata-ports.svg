@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 480" role="img" aria-labelledby="title desc">
+  <title id="title">Puertos SATA</title><desc id="desc">Diagrama original de los conectores SATA agrupados en el borde de una placa base.</desc>
+  <defs><pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#253642" stroke-width="1"/></pattern><linearGradient id="glow" x2="1" y2="0"><stop stop-color="#c4f36b" stop-opacity=".12"/><stop offset="1" stop-color="#c4f36b" stop-opacity="0"/></linearGradient></defs>
+  <rect width="700" height="480" fill="#17232b"/><rect width="700" height="480" fill="url(#grid)"/>
+  <path d="M48 54h590v372H48z" fill="#192830" stroke="#49606a" stroke-width="2" rx="12"/>
+  <path d="M92 98h175v132H92zm130 207h320v12H222zm0 31h258v12H222zM485 88h92v104h-92z" fill="#1d3037" stroke="#405862"/>
+  <path d="M416 108h187v222H416z" fill="url(#glow)" stroke="#c4f36b" stroke-width="2" rx="8"/>
+  <g fill="#20343a" stroke="#90b653" stroke-width="2">
+    <path d="M442 133h126v49H442z" rx="5"/><path d="M442 197h126v49H442z" rx="5"/><path d="M442 261h126v49H442z" rx="5"/>
+  </g>
+  <g fill="#151f26" stroke="#a7d84d">
+    <path d="M458 145h95v24h-95z"/><path d="M458 209h95v24h-95z"/><path d="M458 273h95v24h-95z"/>
+  </g>
+  <g stroke="#c4f36b" stroke-width="1" opacity=".8"><path d="M468 148v18m7-18v18m7-18v18m7-18v18m7-18v18m7-18v18m7-18v18m7-18v18"/><path d="M468 212v18m7-18v18m7-18v18m7-18v18m7-18v18m7-18v18m7-18v18m7-18v18"/><path d="M468 276v18m7-18v18m7-18v18m7-18v18m7-18v18m7-18v18m7-18v18m7-18v18"/></g>
+  <path d="M415 158h-88v-38h-55M415 222h-84v65H265M415 286h-90v74h-75" fill="none" stroke="#718d7f" stroke-width="2"/>
+  <circle cx="272" cy="120" r="4" fill="#c4f36b"/><circle cx="265" cy="287" r="4" fill="#c4f36b"/><circle cx="250" cy="360" r="4" fill="#c4f36b"/>
+  <text x="71" y="78" fill="#8197a0" font-family="monospace" font-size="11" letter-spacing="2">PLACA BASE / COMPONENTES</text>
+  <text x="465" y="354" fill="#c4f36b" font-family="monospace" font-size="12" letter-spacing="2">ÁREA DESTACADA</text><text x="490" y="394" fill="#728893" font-family="monospace" font-size="10">REF. 02—B</text>
+</svg>
