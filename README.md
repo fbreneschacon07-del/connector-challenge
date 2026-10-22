@@ -1,16 +1,6 @@
 # Connector Challenge
 
-Juego educativo en español para practicar cómo identificar los conectores y componentes de una placa base. Es un sitio estático: abre `index.html` o publícalo gratis con GitHub Pages.
-
-## Publicarlo para compartirlo
-
-1. En GitHub, crea un repositorio **público** llamado `connector-challenge`.
-2. En el repositorio, elige **Add file → Upload files** y sube todos los archivos de esta carpeta, incluida la carpeta `assets` y `.nojekyll`. Confirma con **Commit changes**.
-3. Abre **Settings → Pages**.
-4. En **Build and deployment**, selecciona **Deploy from a branch**, elige `main` y la carpeta `/(root)`, y guarda.
-5. Cuando Pages termine de publicar, GitHub mostrará la dirección del juego en esa misma sección. Esa es la URL para compartir.
-
-`index.html`, `styles.css`, `game.js` y `assets/` deben permanecer juntos en la raíz del repositorio.
+Juego educativo en español para practicar cómo identificar los conectores y componentes de una placa base. Es un sitio estático.
 
 ## Modos y datos
 
